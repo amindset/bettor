@@ -35,7 +35,7 @@ def load_lottieurl(url: str):
     return r.json()
 
 lottie_phone = load_lottiefile("phone.json")
-lottie_hello = load_lottieurl('https://assets5.lottiefiles.com/packages/lf20_rEFATf.json')
+lottie_hello = load_lottieurl('https://assets2.lottiefiles.com/packages/lf20_rEFATf.json')
 
 #st_lottie(lottie_phone)
 
