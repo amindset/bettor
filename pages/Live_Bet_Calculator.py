@@ -8,6 +8,17 @@ from streamlit_extras.metric_cards import style_metric_cards
 
 add_logo('https://github.com/amindset/nodestock/blob/main/LIVE%20BETS2.png?raw=true')
 
+st.markdown("""
+    <style>
+    .css-184tjsw p{
+        color: blue;
+    }
+    .css-1xarl3l{
+        color: black;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 left_column, middle_column, right_column = st.columns(3)
 with left_column:
     st.title("💻 Live Bet Calculator")
