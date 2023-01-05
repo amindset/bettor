@@ -24,7 +24,6 @@ with middle_column:
     st.title('')
 with right_column:
     button(username="livebetcalc", floating=False, width=221)
-st.sidebar.success("Select a page above.")
 
 def load_lottiefile(filepath: str):
     with open(filepath, 'r', encoding='utf8', errors='ignore') as f:

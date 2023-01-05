@@ -209,17 +209,17 @@ style_metric_cards()
 left_column, middle_column, right_column = st.columns(3)
 with left_column:
     stoggle(
-    "Strategy Based On",
+    "Strategy 1 Based On",
     """\nThis strategy focuses more on the pace of the game.""",
     )
 with middle_column:
     stoggle(
-    "Strategy Based On",
+    "Strategy 2 Based On",
     """\nThis strategy focuses more on each team's defense.""",
     )
 with right_column:
     stoggle(
-    "Strategy Based On",
+    "Strategy 3 Based On",
     """\nThis strategy is a mix both the pace of the game and each team's defense.""",
     )
 
