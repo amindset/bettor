@@ -5,8 +5,8 @@ from streamlit_extras.buy_me_a_coffee import button
 from streamlit_extras.stoggle import stoggle
 from streamlit_extras.metric_cards import style_metric_cards
 
-
 add_logo('https://github.com/amindset/nodestock/blob/main/LIVE%20BETS2.png?raw=true')
+
 
 st.markdown("""
     <style>
@@ -16,6 +16,23 @@ st.markdown("""
     .css-1xarl3l{
         color: black;
     }
+
+    [data-testid = "stAppViewContainer"] {
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/018/246/original/abstract-colorful-pastel-gradient-background-free-video.jpg");
+    background-size: cover;
+    }
+    .css-tic8ca {
+        background-color: white;
+    }
+    [data-baseweb = "popover"] {
+        background-color: #fcc86d;
+    }
+    #root > div:nth-child(1) > div.withScreencast > div > div > div > section.main.css-k1vhr4.egzxvld3 > div > div:nth-child(1) > div > div:nth-child(5) > div > div > div {
+        background-color: black;
+    }
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
 
@@ -27,7 +44,7 @@ with middle_column:
 with right_column:
     button(username="livebetcalc", floating=False, width=221)
 
-whatLeague = st.header('League')
+whatLeague = st.header('Pick the League')
 st.write('Below you can enter your information into the calculator for the current game. For better odds check out team parlays. The over/under tends to be better.')
 st.write('')
 

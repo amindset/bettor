@@ -14,8 +14,33 @@ st.set_page_config(
 
 
 
-add_logo('https://github.com/amindset/nodestock/blob/main/LIVE%20BETS2.png?raw=true')
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
+page_bg_img = """
+<style>
+[data-testid = "stAppViewContainer"] {
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/018/246/original/abstract-colorful-pastel-gradient-background-free-video.jpg");
+    background-size: cover;
+}
+.css-tic8ca {
+    background-color: white;
+}
+.css-1bk6rk2 a {
+    color: mediumvioletred;
+}
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+add_logo('https://github.com/amindset/nodestock/blob/main/LIVE%20BETS2.png?raw=true')
 
 left_column, middle_column, right_column = st.columns(3)
 with left_column:
@@ -37,7 +62,7 @@ def load_lottieurl(url: str):
 
 lottie_phone = load_lottiefile("phone.json")
 #lottie_hello = load_lottieurl('https://assets2.lottiefiles.com/packages/lf20_rEFATf.json')
-lottie_dunk = load_lottiefile('orangeDunk.json')
+lottie_dunk = load_lottiefile('bball.json')
 
 #st_lottie(lottie_phone)
 
@@ -65,8 +90,8 @@ st.markdown('---')
 st.header('🏠 Find a home')
 
 url = "https://pa.sportsbook.fanduel.com/"
-st.write("[Fanduel](%s)" % url)
+st.subheader("[Fanduel](%s)" % url)
 url2 = "https://sports.pa.betmgm.com/en/sports"
-st.write("[BetMGM](%s)" % url2)
+st.subheader("[BetMGM](%s)" % url2)
 url3 = "https://sportsbook.draftkings.com/"
-st.write("[Draftkings](%s)" % url3)
+st.subheader("[Draftkings](%s)" % url3)

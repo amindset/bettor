@@ -6,16 +6,33 @@ from streamlit_extras.app_logo import add_logo
 from streamlit_extras.buy_me_a_coffee import button
 from streamlit_extras.metric_cards import style_metric_cards
 
-
 add_logo('https://github.com/amindset/nodestock/blob/main/LIVE%20BETS2.png?raw=true')
+
 
 st.markdown("""
     <style>
     .css-1xarl3l,.css-184tjsw p{
         color: black;
     }
+    [data-testid = "stAppViewContainer"] {
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/018/246/original/abstract-colorful-pastel-gradient-background-free-video.jpg");
+    background-size: cover;
+    }
+    .css-tic8ca {
+        background-color: white;
+    }
+    [data-baseweb = "popover"] {
+        background-color: #fcc86d;
+    }
+    #root > div:nth-child(1) > div.withScreencast > div > div > div > section.main.css-k1vhr4.egzxvld3 > div > div:nth-child(1) > div > div:nth-child(5) > div > div > div {
+        background-color: white;
+    }
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
+
 
 left_column, middle_column, right_column = st.columns(3)
 with left_column:
@@ -64,6 +81,7 @@ left_column.metric(label="Current Points Avg", value=pointer)
 middle_column.metric(label="Percent Over", value=pointO)
 right_column.metric(label="Percent Under", value=pointU)
 style_metric_cards()
+
 
 #Rebounds
 rebs_Player = df.loc[df['Players'] == thePlayer, 'REBS']
