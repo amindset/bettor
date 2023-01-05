@@ -35,7 +35,8 @@ def load_lottieurl(url: str):
     return r.json()
 
 lottie_phone = load_lottiefile("phone.json")
-lottie_hello = load_lottieurl('https://assets2.lottiefiles.com/packages/lf20_rEFATf.json')
+#lottie_hello = load_lottieurl('https://assets2.lottiefiles.com/packages/lf20_rEFATf.json')
+lottie_dunk = load_lottiefile('orangeDunk.json')
 
 #st_lottie(lottie_phone)
 
@@ -46,7 +47,7 @@ with left_column:
     st.text("It is a long established fact that a reader will be distracted by the readable \ncontent of a page when looking at its layout.")
 
 with right_column:
-    st_lottie(lottie_hello, height=250, width=300)
+    st_lottie(lottie_dunk, height=250, width=300)
 
 st.markdown('---')
 
