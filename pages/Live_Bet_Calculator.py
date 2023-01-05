@@ -6,7 +6,7 @@ from streamlit_extras.stoggle import stoggle
 from streamlit_extras.metric_cards import style_metric_cards
 
 
-add_logo('https://github.com/andfanilo/social-media-tutorials/blob/master/20221130-extras/logo.png?raw=true')
+add_logo('https://github.com/amindset/nodestock/blob/main/LIVE%20BETS2.png?raw=true')
 
 left_column, middle_column, right_column = st.columns(3)
 with left_column:
@@ -14,7 +14,7 @@ with left_column:
 with middle_column:
     st.title('')
 with right_column:
-    button(username="fake-username", floating=False, width=221)
+    button(username="livebetcalc", floating=False, width=221)
 
 whatLeague = st.header('League')
 st.text('Below you can enter your information into the calculator for the current game. For better odds check out team parlays. The over/under tends to be better.')
