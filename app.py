@@ -42,9 +42,9 @@ lottie_dunk = load_lottiefile('orangeDunk.json')
 
 left_column, right_column = st.columns(2)
 with left_column:
-    st.text('')
+    st.write('')
     st.title('Hi, we are Live Bet Calculator 👋')
-    st.text("It is a long established fact that a reader will be distracted by the readable \ncontent of a page when looking at its layout.")
+    st.write("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.")
 
 with right_column:
     st_lottie(lottie_dunk, height=250, width=300)

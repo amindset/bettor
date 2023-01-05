@@ -17,8 +17,8 @@ with right_column:
     button(username="livebetcalc", floating=False, width=221)
 
 whatLeague = st.header('League')
-st.text('Below you can enter your information into the calculator for the current game. For better odds check out team parlays. The over/under tends to be better.')
-st.text('')
+st.write('Below you can enter your information into the calculator for the current game. For better odds check out team parlays. The over/under tends to be better.')
+st.write('')
 
 stoggle(
     "Click me for Notes",
