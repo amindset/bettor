@@ -5,4 +5,9 @@ echo "\
 email = \"your-email@domain.com\"\n\
 " > ~/.streamlit/credentials.toml
 
-
+echo "\
+[server]\n\
+headless = true\n\
+enableCORS=false\n\
+port = $PORT\n\
+" > E:/Work Stuff/Python Stuff/LiveBetCalc/.streamlit/config.toml
