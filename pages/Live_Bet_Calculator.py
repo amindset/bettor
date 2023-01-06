@@ -54,7 +54,8 @@ stoggle(
         \nSetting your bets around half time or later in the game helps improve win rates.""",
 )
 
-contact_options = ['NBA','NFL','NCAAB','NCAAF','Overseas BBall']
+#contact_options = ['NBA','NFL','NCAAB','NCAAF','Overseas BBall']
+contact_options = ['NBA','NCAAB']
 contact_selected = st.selectbox("Choose a league!", options=contact_options)
 
 defense = pd.read_excel(
@@ -77,6 +78,7 @@ with left_column:
     dataHome2 = defense.loc[defense["Team"] == x,'Current']
     c = str(dataHome)
     c2 = str(dataHome2)
+    #print(dataHome)
     homer = c.split()[1]
     homer2 = c2.split()[1]
     #st.subheader(homer)
@@ -104,30 +106,30 @@ total_score = home_score+away_score
 
 left_column, middle_column, right_colum = st.columns(3, gap='medium')
 with left_column:
-    whatQTR = st.number_input('What quarter are we in?',value=1)
+    whatQTR = st.number_input('What quarter are we in?',value=1.00)
     
 with middle_column:
-    timeLeft = st.number_input('Enter the remaining time in quarter!', value=1)
+    timeLeft = st.number_input('Enter the remaining time in quarter!', value=1.00)
 
 with right_colum:
-    platformBet = st.number_input('Enter the current Over/Under bet for your platform!', value=50)
+    platformBet = st.number_input('Enter the current Over/Under bet for your platform!', value=50.00)
 
 
 if contact_selected == "NBA":
     theLeague = 48
     timeLeftinGame = (float(theLeague) -(float(theLeague)/4)*float(whatQTR))+float(timeLeft)
-elif contact_selected == "NFL" or contact_selected == "NCAAF":
-    theLeague = st.text(60)
-    timeLeftinGame = (float(theLeague)-(float(theLeague)/4)*float(whatQTR))+float(timeLeft)
-elif contact_selected == "Overseas BBall":
-    theLeague = st.text(40)
+#elif contact_selected == "NFL" or contact_selected == "NCAAF":
+#    theLeague = 60
+#    timeLeftinGame = (float(theLeague)-(float(theLeague)/4)*float(whatQTR))+float(timeLeft)
+#elif contact_selected == "Overseas BBall":
+#    theLeague = 40
     timeLeftinGame = (float(theLeague)-(float(theLeague)/4)*float(whatQTR))+float(timeLeft)
 elif contact_selected == "NCAAB":
-    theLeague = st.text(40)
+    theLeague = 40
     timeLeftinGame = (float(theLeague)-(float(theLeague)/2)*float(whatQTR))+float(timeLeft)
 else:
     theLeague = st.text("There was an error")
-
+#print('')
 #print(timeLeftinGame)
 #print(theLeague)
 #print(total_score)
@@ -135,8 +137,13 @@ else:
 
 myPace = total_score/((float(theLeague)-float(timeLeftinGame)))
 platformPace = (float(platformBet)-total_score)/float(timeLeftinGame)
+
 #print(myPace)
 #print(platformPace)
+#print(homer)
+#print(awayer)
+#print(homer2)
+#print(awayer2)
 high_Pts = ((myPace+(float(homer)+float(awayer))/100))*float(timeLeftinGame)+total_score
 norm_Pts = ((myPace+(float(homer2)+float(awayer2))/100))*float(timeLeftinGame)+total_score
 norm_Pts2 = ((myPace-(float(homer2)+float(awayer2))/100))*float(timeLeftinGame)+total_score
@@ -194,7 +201,7 @@ if r1==2:
     else:
         s2 = 'Under'
 else:
-    print('')
+    s2 = '-'
 
 # Strategy 3
 if res1 == 'Over' and res3 == 'Over':
@@ -215,7 +222,21 @@ if r2==2:
     else:
         s3 = 'Under'
 else:
-    print('')
+    s3 = '-'
+
+#print(high_Pts)
+#print(norm_Pts)
+#print(norm_Pts2)
+#print(low_Pts)
+
+#print(r1)
+#print(r2)
+#print(res1)
+#print(res2)
+#print(res3)
+#print(res4)
+#print(res5)
+#print(res6)
 
 left_column, middle_column, right_column = st.columns(3)
 left_column.metric(label="Strategy 1", value=s1)
