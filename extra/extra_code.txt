@@ -1,0 +1,13 @@
+def load_lottiefile(filepath: str):
+    with open(filepath, 'r', encoding='utf8', errors='ignore') as f:
+        return json.load(f)
+
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+lottie_phone = load_lottiefile("phone.json")
+#lottie_hello = load_lottieurl('https://assets2.lottiefiles.com/packages/lf20_rEFATf.json')
+lottie_dunk = load_lottiefile('bball.json')

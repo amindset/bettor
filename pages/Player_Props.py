@@ -63,7 +63,11 @@ st.subheader(thePlayer)
 pts_Player = df.loc[df['Players'] == thePlayer, 'PTS']
 a = str(pts_Player)
 pointer = a.split()[1]
-    
+
+ptsB_Player = df.loc[df['Players'] == thePlayer, 'PTS Bet']
+a = str(ptsB_Player)
+pointerB = a.split()[1]   
+
 ptsO_Player = df.loc[df['Players'] == thePlayer, 'PTS Over']
 b = str(ptsO_Player)
 pointerO = b.split()[1]
@@ -76,10 +80,11 @@ pointerU = c.split()[1]
 ptU = round(float(pointerU)*100)
 pointU = f"{ptU}%"
 
-left_column, middle_column, right_column = st.columns(3)
+left_column, snd_column, middle_column, right_column = st.columns(4)
 left_column.metric(label="Current Points Avg", value=pointer)
-middle_column.metric(label="Percent Over", value=pointO)
-right_column.metric(label="Percent Under", value=pointU)
+snd_column.metric(label="Platform Bet", value=pointerB)
+middle_column.metric(label="He Went Over", value=pointO)
+right_column.metric(label="He Went Under", value=pointU)
 style_metric_cards()
 
 
@@ -87,6 +92,10 @@ style_metric_cards()
 rebs_Player = df.loc[df['Players'] == thePlayer, 'REBS']
 d = str(rebs_Player)
 rebounder = d.split()[1]
+
+rebsB_Player = df.loc[df['Players'] == thePlayer, 'REBS Bet']
+d = str(rebsB_Player)
+rebounderB = d.split()[1]
 
 rebsO_Player = df.loc[df['Players'] == thePlayer, 'REBS Over']
 e = str(rebsO_Player)
@@ -100,16 +109,21 @@ rebounderU = f.split()[1]
 rebU = round(float(rebounderU)*100)
 reboundU = f"{rebU}%"
 
-left_column, middle_column, right_column = st.columns(3)
+left_column, snd_column, middle_column, right_column = st.columns(4)
 left_column.metric(label="Current Rebounds Avg", value=rebounder)
-middle_column.metric(label="Percent Over", value=reboundO)
-right_column.metric(label="Percent Under", value=reboundU)
+snd_column.metric(label="Platform Bet", value=rebounderB)
+middle_column.metric(label="He Went Over", value=reboundO)
+right_column.metric(label="He Went Under", value=reboundU)
 style_metric_cards()
 
 # Assists
 asts_Player = df.loc[df['Players'] == thePlayer, 'ASTS']
 x = str(asts_Player)
 assister = x.split()[1]
+
+astsB_Player = df.loc[df['Players'] == thePlayer, 'ASTS Bet']
+x = str(astsB_Player)
+assisterB = x.split()[1]
 
 astsO_Player = df.loc[df['Players'] == thePlayer, 'ASTS Over']
 y = str(astsO_Player)
@@ -123,9 +137,10 @@ assisterU = z.split()[1]
 astU = round(float(assisterU)*100)
 assistU = f"{astU}%"
 
-left_column, middle_column, right_column = st.columns(3)
+left_column, snd_column, middle_column, right_column = st.columns(4)
 left_column.metric(label="Current Assists Avg", value=assister)
-middle_column.metric(label="Percent Over", value=assistO)
-right_column.metric(label="Percent Under", value=assistU)
+snd_column.metric(label="Platform Bet", value=assisterB)
+middle_column.metric(label="He Went Over", value=assistO)
+right_column.metric(label="He Went Under", value=assistU)
 style_metric_cards()
 

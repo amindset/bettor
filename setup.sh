@@ -10,4 +10,4 @@ echo "\
 headless = true\n\
 enableCORS=false\n\
 port = $PORT\n\
-" > E:/Work Stuff/Python Stuff/LiveBetCalc/.streamlit/config.toml
+" > ~/.streamlit/config.toml
