@@ -36,6 +36,7 @@ page_bg_img = """
 </style>
 """
 
+
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 add_logo('https://github.com/amindset/nodestock/blob/main/LIVE%20BETS2.png?raw=true')

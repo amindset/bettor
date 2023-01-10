@@ -115,6 +115,7 @@ with right_colum:
     platformBet = st.number_input('Enter the current Over/Under bet for your platform!', value=50.00)
 
 
+
 if contact_selected == "NBA":
     theLeague = 48
     timeLeftinGame = (float(theLeague) -(float(theLeague)/4)*float(whatQTR))+float(timeLeft)
