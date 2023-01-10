@@ -1,0 +1,26 @@
+{
+    "01a06b801eb7962fc5be15ff8f1cd899": {
+        "page_script_hash": "01a06b801eb7962fc5be15ff8f1cd899",
+        "page_name": "auth",
+        "icon": "",
+        "script_path": "C:\\Users\\Abdul Rehman\\Desktop\\LiveBetCalc\\auth.py"
+    },
+    "1563327b3e35a3987e01c99483287667": {
+        "page_script_hash": "1563327b3e35a3987e01c99483287667",
+        "page_name": "app",
+        "icon": "",
+        "script_path": "C:\\Users\\Abdul Rehman\\Desktop\\LiveBetCalc\\pages\\app.py"
+    },
+    "012a19562763ff98ae743b0c11c726e6": {
+        "page_script_hash": "012a19562763ff98ae743b0c11c726e6",
+        "page_name": "Live_Bet_Calculator",
+        "icon": "",
+        "script_path": "C:\\Users\\Abdul Rehman\\Desktop\\LiveBetCalc\\pages\\Live_Bet_Calculator.py"
+    },
+    "aab941fffc39adcdd6c2928b6ff56346": {
+        "page_script_hash": "aab941fffc39adcdd6c2928b6ff56346",
+        "page_name": "Player_Props",
+        "icon": "",
+        "script_path": "C:\\Users\\Abdul Rehman\\Desktop\\LiveBetCalc\\pages\\Player_Props.py"
+    }
+}

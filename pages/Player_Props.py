@@ -9,6 +9,8 @@ from streamlit_extras.metric_cards import style_metric_cards
 add_logo('https://github.com/amindset/nodestock/blob/main/LIVE%20BETS2.png?raw=true')
 
 
+
+
 st.markdown("""
     <style>
     .css-1xarl3l,.css-184tjsw p{
