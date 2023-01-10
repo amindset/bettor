@@ -13,7 +13,7 @@ from streamlit_extras.switch_page_button import switch_page
 from PIL import Image
 
 st.set_page_config(
-    page_title="Login/Signup",
+    page_title="Login / Signup",
     page_icon="🏀",
     layout='wide'
 )
