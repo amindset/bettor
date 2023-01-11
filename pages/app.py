@@ -7,7 +7,7 @@ from streamlit_lottie import st_lottie
 
 
 st.set_page_config(
-    page_title="Live Bet Calculator",
+    page_title="Home",
     page_icon="🏀",
     layout='wide'
 )
@@ -35,7 +35,6 @@ page_bg_img = """
 }
 </style>
 """
-
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
